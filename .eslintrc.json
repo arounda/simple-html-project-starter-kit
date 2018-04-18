@@ -23,10 +23,6 @@
             "warn",            
             "double"
         ],
-        "indent": [
-            "warn",
-            4
-        ],
         "no-mixed-spaces-and-tabs":"warn"
     },
     "extends": [
