@@ -7,9 +7,6 @@
     },
     "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
         "sourceType": "module"
     },
     "rules": {
@@ -33,7 +30,6 @@
         "no-mixed-spaces-and-tabs":"warn"
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "eslint:recommended"
       ]
 }
