@@ -1,8 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = env => ({
   context: path.resolve(__dirname, "./src"),
@@ -24,18 +24,12 @@ module.exports = env => ({
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader"]
-        })
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader", "postcss-loader", "sass-loader"]
-        })
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -63,7 +57,7 @@ module.exports = env => ({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
     }),
     new CopyWebpackPlugin([{from: path.join(__dirname, "/src/public"), to: path.join(__dirname, "dist")}]),
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: "styles.css"
     }),
     new BundleAnalyzerPlugin({analyzerMode: env.ANALYZE_BUNDLE ? "server" : "disabled"})
