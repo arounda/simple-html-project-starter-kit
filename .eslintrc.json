@@ -20,9 +20,11 @@
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "quotes": [
-            "warn",            
+            "error",            
             "double"
         ],
+        "indent": ["error", 2],
+        "semi":"warn",
         "no-mixed-spaces-and-tabs":"warn"
     },
     "extends": [
