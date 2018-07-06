@@ -3,7 +3,7 @@
     [
       "env",
       {
-        "targets": ["last 2 versions"],
+        "targets": ["> 1%", "last 2 versions"],
         "node": "current"
       }
     ]
