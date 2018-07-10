@@ -1,7 +1,8 @@
-# html-starter-kit
+# html-vue-starter-kit
 
 ## Features
-- Hot Reloading with Webpack Serve.
+- Hot Reloading with Webpack Serve and BrowserSync.
+- Full Vue build is included.
 - Support for js, scss, css, png, jpg, svg, ttf, eot, svg, otf from the box.
 - Usage of ES6+ features with Babel.
 - JS linting with ESLint.

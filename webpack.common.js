@@ -10,6 +10,11 @@ module.exports = {
 		filename: "main.js"
 	},
 	target: "web",
+	resolve: {
+		alias: {
+			"vue": "vue/dist/vue.esm.js"
+		}
+	},
 	module: {
 		rules: [{
 			test: /\.js$/,
