@@ -5,10 +5,7 @@
     "build": "webpack --env.NODE_ENV=production --progress -p",
     "analyze": "webpack --env.NODE_ENV=production --env.ANALYZE_BUNDLE=true --progress -p"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+  "browserslist": ["> 1%", "last 2 versions"],
   "devDependencies": {
     "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
