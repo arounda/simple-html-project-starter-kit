@@ -80,6 +80,13 @@ module.exports = env => {
         },
         devtool: env.NODE_ENV === "production" ? false : "source-map",
         target: "web",
-        plugins
+        plugins,
+        devServer: {
+            contentBase: path.join(__dirname, "dist"),
+            compress: true,
+            hot: true,
+            port: 9000,
+            historyApiFallback: true
+		  }
     };
 };
