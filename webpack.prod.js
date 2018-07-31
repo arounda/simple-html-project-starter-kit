@@ -5,6 +5,13 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	mode: "production",
+	optimization: {
+		splitChunks: {
+			chunks: "all",
+			name: "vendors",
+			minChunks: 2
+		}
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		publicPath: "",
