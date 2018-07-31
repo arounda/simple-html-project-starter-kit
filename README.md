@@ -18,7 +18,8 @@
 - _src/_ - entry point for Webpack (index.js), main .scss file (styles.scss), potscss config. 
   - _/scss/_ - .scss files.
   - _/scripts/_ - .js files.
-  - _/public/_ - html-templates and various assets (images, fonts etc). 
+  - _/templates/_ - html-templates. 
+  - _/assets/_ - various assets (images, fonts etc). 
   - _/static/_ - various static files to be included in the project. 
   
 Inner structure of _src_ subfolders may vary though files are prefered to be grouped by domain.

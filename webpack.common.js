@@ -29,8 +29,9 @@ module.exports = {
 			use: [{
 				loader: "file-loader",
 				options: {
-					name: "./[path][name].[ext]",
-					context: path.resolve(__dirname, "src/public")          
+					name: "[path][name].[ext]",
+					outputPath: "./",
+					context: path.resolve(__dirname, "src")          
 				}
 			}]
 		},
@@ -39,8 +40,9 @@ module.exports = {
 			use: [{
 				loader: "file-loader",
 				options: {
-					name: "./[path][name].[ext]",
-					context: path.resolve(__dirname, "src/public")   
+					name: "[path][name].[ext]",
+					outputPath: "./",
+					context: path.resolve(__dirname, "src")   
 				}
 			}]
 		},
@@ -58,7 +60,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: "./public/index.html"
+			template: "./templates/index.html"
 		}),
 		new webpack.DefinePlugin({
 			"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
