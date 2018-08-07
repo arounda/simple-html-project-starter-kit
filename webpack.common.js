@@ -1,7 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const HTMLPluginConfig = require("./html-webpack-plugin.config");
 
 module.exports = {
 	context: path.resolve(__dirname, "./src"),
@@ -58,10 +59,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			filename: "index.html",
-			template: "./templates/index.html"
-		}),
+		...HTMLPluginConfig,
 		new webpack.DefinePlugin({
 			"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
 		}),

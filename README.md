@@ -18,7 +18,9 @@
 - _src/_ - entry point for Webpack (index.js), main .scss file (styles.scss), potscss config. 
   - _/scss/_ - .scss files.
   - _/scripts/_ - .js files.
-  - _/templates/_ - html-templates. 
+  - _/templates/_ - template files.
+  	- _/pages/_ - main templates for pages. Automaticly picked up by HTML Webpack Plugin.
+  	- _/parts/_ - templates for headers, section etc. Not built by Webpack by default.
   - _/assets/_ - various assets (images, fonts etc). 
   - _/static/_ - various static files to be included in the project. 
   
