@@ -6,7 +6,7 @@
 - Usage of ES6+ features with Babel.
 - JS linting with ESLint.
 - Handling styles with Autoprefixer and PostCSS.
-- HTML templates support with HTML Webpack Plugin.
+- HTML and EJS templates support with HTML Webpack Plugin.
 
 ## npm scripts
 - _npm start_ - start BrowserSync with Webpack Serve.

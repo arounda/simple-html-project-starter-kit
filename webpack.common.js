@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const HTMLPluginConfig = require("./html-webpack-plugin.config");
 
@@ -48,14 +49,20 @@ module.exports = {
 			}]
 		},
 		{
-			test: /\.html$/,
-			use: {
-				loader:"html-loader",
-				options: {
-					attrs: ["img:src", "object:data"]
+			test: /\.(html|ejs)$/,
+			use:[
+				{
+					loader:"html-loader",
+					options: {
+						attrs: ["img:src", "object:data"],
+						interpolate: true
+					}
+				},
+				{ loader: "ejs-html-loader", 
+					options: { htmlWebpackPlugin: HtmlWebpackPlugin }
 				}
-			}
-		},
+			]
+		}
 		]
 	},
 	plugins: [
