@@ -54,8 +54,7 @@ module.exports = {
 				{
 					loader:"html-loader",
 					options: {
-						attrs: ["img:src", "object:data"],
-						interpolate: true
+						attrs: ["img:src", "object:data"]
 					}
 				},
 				{ loader: "ejs-html-loader", 
