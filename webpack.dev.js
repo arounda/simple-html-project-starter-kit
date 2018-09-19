@@ -5,9 +5,7 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 module.exports = {
 	mode: "development",
 	output: {
-		path: path.resolve(__dirname, "serve"),
-		hotUpdateChunkFilename: "../hot/hot-update.js",
-		hotUpdateMainFilename: "../hot/hot-update.json"
+		path: path.resolve(__dirname, "serve")
 	},
 	devtool: "source-map",
 	plugins: [
@@ -19,6 +17,8 @@ module.exports = {
 			host: "localhost",
 			port: 3000,
 			proxy: "http://localhost:9000/"
+		}, {
+			reload: false
 		})
 	],
 	serve: {
